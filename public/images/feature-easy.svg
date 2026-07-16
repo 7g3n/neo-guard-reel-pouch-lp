@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="特徴イメージのプレースホルダー">
+  <rect width="600" height="450" fill="#eef2f5"/>
+  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <line x1="80" y1="120" x2="520" y2="330" stroke="#c2ccd3" stroke-width="12" stroke-linecap="round"/>
+  <g transform="translate(300 225)">
+    <rect x="-120" y="-72" width="240" height="150" rx="20" fill="#123047"/>
+    <rect x="-30" y="-72" width="60" height="150" fill="#0f2a3d"/>
+    <path d="M-120 -30 q-24 0 -24 24" fill="none" stroke="#123047" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">装着イメージ</text>
+</svg>

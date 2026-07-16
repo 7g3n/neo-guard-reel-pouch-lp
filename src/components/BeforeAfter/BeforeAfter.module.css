@@ -1,0 +1,79 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+}
+
+.mediaWrap {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.before {
+  background: #8a6d3b;
+}
+
+.after {
+  background: var(--color-blue);
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+}
+
+.arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  /* Before カードの右端中央に矢印を重ねる */
+  .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    right: -32px;
+    width: 40px;
+    height: 40px;
+    background: var(--color-cta);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+  }
+}

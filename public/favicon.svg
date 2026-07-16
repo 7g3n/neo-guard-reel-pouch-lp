@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="NEO GUARD">
+  <rect width="32" height="32" rx="6" fill="#123047"/>
+  <path d="M16 5l9 3.4v6.2c0 5.7-3.8 9.6-9 11.4-5.2-1.8-9-5.7-9-11.4V8.4L16 5z" fill="none" stroke="#e45a2a" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M11.5 16.2l3 3 6-6.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

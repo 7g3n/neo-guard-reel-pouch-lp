@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="使い方ステップ3の図解プレースホルダー">
+  <rect width="480" height="360" fill="#eef2f5"/>
+  <rect x="1" y="1" width="478" height="358" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <rect x="150" y="110" width="180" height="140" rx="20" fill="#123047"/>
+  <rect x="205" y="150" width="70" height="60" rx="8" fill="#0f2a3d"/>
+  <path d="M215 180 l14 14 l26 -30" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="240" y="330" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#59636e">面ファスナーで固定</text>
+</svg>

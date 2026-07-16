@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="使い方ステップ2の図解プレースホルダー">
+  <rect width="480" height="360" fill="#eef2f5"/>
+  <rect x="1" y="1" width="478" height="358" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <rect x="150" y="110" width="180" height="140" rx="20" fill="#123047"/>
+  <rect x="140" y="165" width="200" height="34" rx="8" fill="#e45a2a"/>
+  <path d="M140 182 h200" stroke="#fff" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="240" y="330" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#59636e">固定ベルトを巻く</text>
+</svg>

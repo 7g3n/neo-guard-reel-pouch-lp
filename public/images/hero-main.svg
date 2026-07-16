@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="商品メインビジュアルのプレースホルダー">
+  <rect width="800" height="600" fill="#e9edf0"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <!-- rod line -->
+  <line x1="120" y1="150" x2="700" y2="470" stroke="#c2ccd3" stroke-width="10" stroke-linecap="round"/>
+  <!-- pouch (rounded body wrapping the reel) -->
+  <g transform="translate(400 300)">
+    <rect x="-150" y="-95" width="300" height="200" rx="24" fill="#123047"/>
+    <rect x="-150" y="-95" width="300" height="200" rx="24" fill="none" stroke="#0d2536" stroke-width="4"/>
+    <!-- velcro strap -->
+    <rect x="-40" y="-95" width="80" height="200" fill="#0f2a3d"/>
+    <!-- reel spool hint -->
+    <circle cx="0" cy="5" r="52" fill="none" stroke="#3a5a70" stroke-width="6"/>
+    <circle cx="0" cy="5" r="18" fill="none" stroke="#3a5a70" stroke-width="6"/>
+    <!-- brand mark -->
+    <text x="0" y="-52" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#8aa2b3" letter-spacing="2">NEO GUARD</text>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="20" fill="#59636e">商品画像（差し替え用プレースホルダー）</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="使用後のイメージのプレースホルダー">
+  <rect width="600" height="450" fill="#e8edf0"/>
+  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <rect x="70" y="120" width="460" height="260" rx="16" fill="#d3dbe1"/>
+  <rect x="70" y="120" width="460" height="60" rx="16" fill="#c3cdd4"/>
+  <!-- each reel in its own pouch -->
+  <g>
+    <rect x="150" y="215" width="130" height="120" rx="18" fill="#123047"/>
+    <circle cx="215" cy="275" r="30" fill="none" stroke="#3a5a70" stroke-width="6"/>
+    <rect x="320" y="215" width="130" height="120" rx="18" fill="#123047"/>
+    <circle cx="385" cy="275" r="30" fill="none" stroke="#3a5a70" stroke-width="6"/>
+  </g>
+  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">使用後：ポーチで個別に保護</text>
+</svg>

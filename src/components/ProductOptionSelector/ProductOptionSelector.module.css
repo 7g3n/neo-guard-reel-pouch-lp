@@ -1,0 +1,95 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.selectedLabel {
+  font-weight: 400;
+  color: var(--color-text-sub);
+  font-size: 0.875rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.option:hover {
+  border-color: var(--color-blue);
+}
+
+/* Selection is conveyed by border weight, tint AND a check icon — not color alone */
+.selected {
+  border-color: var(--color-navy);
+  border-width: 2px;
+  padding: 7px 15px;
+  background: var(--color-navy-tint);
+  font-weight: 700;
+}
+
+.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  border-color: var(--color-border);
+}
+
+/* Visually hidden radio (keeps native keyboard behaviour) */
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+
+/* Focus ring driven by the hidden input */
+.input:focus-visible + .swatch,
+.option:has(.input:focus-visible) {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(23, 33, 43, 0.2);
+  flex-shrink: 0;
+}
+
+.check {
+  color: var(--color-navy);
+}

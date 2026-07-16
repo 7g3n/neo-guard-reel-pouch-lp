@@ -1,0 +1,108 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.sizeBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 32px;
+  padding-inline: 10px;
+  background: var(--color-navy);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.note {
+  margin-top: 16px;
+  font-size: 0.8125rem;
+  color: var(--color-text-sub);
+}
+
+/* Mobile: card layout (no horizontal scroll) */
+@media (max-width: 639px) {
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .table tr {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 8px 16px;
+    margin-bottom: 12px;
+  }
+
+  .table td,
+  .table th {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .table tr td:last-child {
+    border-bottom: none;
+  }
+
+  .table td::before,
+  .table th::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--color-text-sub);
+    text-align: left;
+  }
+
+  .sizeCell {
+    background: var(--color-navy-tint);
+    border-radius: var(--radius-sm);
+    margin-bottom: 4px;
+  }
+}
+
+/* Desktop: standard table */
+@media (min-width: 640px) {
+  .table th,
+  .table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .table thead th {
+    background: var(--color-navy-tint);
+    color: var(--color-navy);
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .table thead th:first-child {
+    border-top-left-radius: var(--radius-md);
+  }
+  .table thead th:last-child {
+    border-top-right-radius: var(--radius-md);
+  }
+
+  .table tbody tr {
+    background: var(--color-surface);
+  }
+
+  .table tbody th {
+    font-weight: 400;
+  }
+}

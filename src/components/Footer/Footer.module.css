@@ -1,0 +1,73 @@
+.footer {
+  background: #0d2536;
+  color: #cdd8e0;
+  padding-block: 40px 32px;
+  /* モバイル固定CTAに隠れないよう下部余白を確保 */
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: #9fb0bd;
+  line-height: 1.7;
+  max-width: 32ch;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.link {
+  color: #cdd8e0;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bottom {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #8fa2b0;
+  line-height: 1.7;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #8fa2b0;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

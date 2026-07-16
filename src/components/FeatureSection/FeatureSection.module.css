@@ -1,0 +1,71 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.media {
+  flex: 1 1 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.body {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-cta);
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.text {
+  margin-top: 12px;
+  color: var(--color-text-sub);
+  line-height: 1.85;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 0.8125rem;
+  color: var(--color-text-sub);
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-blue);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    gap: 44px;
+  }
+  /* 偶数行は画像と本文を左右反転して単調さを避ける */
+  .row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

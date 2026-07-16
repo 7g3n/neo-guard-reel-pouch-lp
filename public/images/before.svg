@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="使用前のイメージのプレースホルダー">
+  <rect width="600" height="450" fill="#ecebe8"/>
+  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <!-- bag -->
+  <rect x="70" y="120" width="460" height="260" rx="16" fill="#dcd7ce"/>
+  <rect x="70" y="120" width="460" height="60" rx="16" fill="#cdc7bc"/>
+  <!-- reels touching each other, plus a scuff mark -->
+  <g stroke="#123047" stroke-width="6" fill="none">
+    <circle cx="230" cy="270" r="46"/>
+    <circle cx="230" cy="270" r="15"/>
+    <circle cx="330" cy="285" r="46"/>
+    <circle cx="330" cy="285" r="15"/>
+  </g>
+  <path d="M276 258 l16 -10 M280 272 l18 -8" stroke="#c0533a" stroke-width="4" stroke-linecap="round"/>
+  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">使用前：リールが直接接触</text>
+</svg>

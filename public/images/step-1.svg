@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="使い方ステップ1の図解プレースホルダー">
+  <rect width="480" height="360" fill="#eef2f5"/>
+  <rect x="1" y="1" width="478" height="358" fill="none" stroke="#dde2e6" stroke-width="2"/>
+  <line x1="60" y1="120" x2="420" y2="120" stroke="#c2ccd3" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="240" cy="150" r="40" fill="none" stroke="#123047" stroke-width="7"/>
+  <circle cx="240" cy="150" r="13" fill="none" stroke="#123047" stroke-width="7"/>
+  <path d="M200 250 q40 -34 80 0" fill="none" stroke="#e45a2a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M240 210 v30 M228 226 l12 14 l12 -14" fill="none" stroke="#e45a2a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="240" y="330" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#59636e">ポーチをかぶせる</text>
+</svg>
