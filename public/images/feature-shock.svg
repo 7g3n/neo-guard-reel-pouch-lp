@@ -1,11 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="特徴イメージのプレースホルダー">
-  <rect width="600" height="450" fill="#eef2f5"/>
-  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <g transform="translate(300 205)">
-    <rect x="-130" y="-70" width="260" height="150" rx="20" fill="#dbe4ea"/>
-    <rect x="-108" y="-50" width="216" height="110" rx="14" fill="#c3d1da"/>
-    <circle cx="0" cy="5" r="42" fill="none" stroke="#123047" stroke-width="7"/>
-    <circle cx="0" cy="5" r="14" fill="none" stroke="#123047" stroke-width="7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="厚みのあるネオプレーン素材がリールを柔らかく包み込み衝撃を和らげる様子">
+  <rect width="600" height="450" fill="#eef1f3" />
+  <ellipse cx="300" cy="392" rx="176" ry="20" fill="#123047" opacity="0.08" />
+
+  <!-- neoprene cradle (cross-section) -->
+  <g>
+    <!-- outer foam shell -->
+    <rect x="118" y="96" width="364" height="266" rx="46" fill="#0e2536" />
+    <rect x="122" y="92" width="364" height="266" rx="46" fill="#163a54" />
+    <!-- soft neoprene inner layer -->
+    <rect x="150" y="120" width="308" height="210" rx="34" fill="#20506f" />
+    <!-- quilted padding lines -->
+    <g stroke="#3a6a8f" stroke-width="2" opacity="0.5" fill="none">
+      <path d="M150 168 q154 -26 308 0" />
+      <path d="M150 282 q154 26 308 0" />
+    </g>
+    <!-- hollow cavity holding the reel -->
+    <rect x="188" y="150" width="232" height="150" rx="24" fill="#eef1f3" />
+    <rect x="188" y="150" width="232" height="150" rx="24" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="7 5" opacity="0.6" />
   </g>
-  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">クッション断面イメージ</text>
+
+  <!-- reel nested inside -->
+  <g transform="translate(304 226)">
+    <!-- body -->
+    <path d="M-40 -40 q70 -14 96 24 q10 44 -22 58 q-64 12 -86 -16 q-16 -40 12 -66z" fill="#414c57" />
+    <path d="M-40 -40 q70 -14 96 24 q10 44 -22 58 q-64 12 -86 -16 q-16 -40 12 -66z" fill="none" stroke="#333c45" stroke-width="2" />
+    <!-- spool -->
+    <ellipse cx="-58" cy="6" rx="22" ry="42" fill="#5c6873" />
+    <ellipse cx="-58" cy="-34" rx="22" ry="8" fill="#8a97a1" />
+    <ellipse cx="-58" cy="46" rx="22" ry="8" fill="#3f4952" />
+    <ellipse cx="-58" cy="6" rx="10" ry="20" fill="#39424b" />
+    <!-- bail -->
+    <path d="M-74 -32 q-22 40 0 78" fill="none" stroke="#9aa6af" stroke-width="4" stroke-linecap="round" />
+    <circle cx="-74" cy="-32" r="4" fill="#1677a6" />
+    <!-- handle knob -->
+    <rect x="44" y="-6" width="34" height="10" rx="5" fill="#333c45" transform="rotate(20 61 -1)" />
+    <circle cx="86" cy="24" r="13" fill="#242c34" />
+    <circle cx="82" cy="20" r="4" fill="#4a555f" />
+  </g>
+
+  <!-- gentle inward cushioning chevrons -->
+  <g stroke="#1677a6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M104 214 l14 12 l-14 12" transform="translate(-4 0)" />
+    <path d="M496 214 l-14 12 l14 12" transform="translate(4 0)" />
+  </g>
 </svg>

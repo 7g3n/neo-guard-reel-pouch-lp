@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { RotateCcw, ArrowRight } from 'lucide-react';
 import type { ReelType, SizeCode } from '../../types';
 import {
@@ -22,10 +22,25 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
   const [step, setStep] = useState<Step>(1);
   const [reelType, setReelType] = useState<ReelType | null>(null);
   const [started, setStarted] = useState(false);
-
   const [result, setResult] = useState<{ size: SizeCode; reason: string } | null>(
     null,
   );
+
+  const panelRef = useRef<HTMLDivElement>(null);
+  // 初回マウント時にフォーカスを奪わないためのフラグ
+  const skipInitialFocus = useRef(true);
+
+  // 質問が切り替わったら、その見出しへフォーカスを移し、スクリーンリーダーに読み上げさせる
+  useEffect(() => {
+    if (skipInitialFocus.current) {
+      skipInitialFocus.current = false;
+      return;
+    }
+    const target = panelRef.current?.querySelector<HTMLElement>(
+      '[data-step-focus]',
+    );
+    target?.focus();
+  }, [step]);
 
   const beginIfNeeded = () => {
     if (!started) {
@@ -52,6 +67,8 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
     setStep(1);
     setReelType(null);
     setResult(null);
+    // 「もう一度診断する」で再度 size_finder_start を計測できるようリセット
+    setStarted(false);
   };
 
   const sizeOptions = reelType === 'spinning' ? spinningSizes : baitSizes;
@@ -67,7 +84,7 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
           id="finder-heading"
         />
 
-        <div className={styles.panel}>
+        <div className={styles.panel} ref={panelRef}>
           <ol className={styles.progress} aria-hidden="true">
             {[1, 2, 3].map((n) => (
               <li
@@ -85,8 +102,13 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
           <div aria-live="polite">
             {step === 1 && (
               <fieldset className={styles.fieldset}>
-                <legend className={styles.legend}>
+                <legend
+                  className={styles.legend}
+                  tabIndex={-1}
+                  data-step-focus
+                >
                   質問1：使用しているリールの種類は？
+                  <span className="visually-hidden">（ステップ 1 / 全3ステップ）</span>
                 </legend>
                 <div className={styles.options}>
                   <button
@@ -109,8 +131,13 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
 
             {step === 2 && (
               <fieldset className={styles.fieldset}>
-                <legend className={styles.legend}>
+                <legend
+                  className={styles.legend}
+                  tabIndex={-1}
+                  data-step-focus
+                >
                   質問2：リールの大きさは？
+                  <span className="visually-hidden">（ステップ 2 / 全3ステップ）</span>
                 </legend>
                 <div className={styles.options}>
                   {sizeOptions.map((opt) => (
@@ -136,7 +163,16 @@ export function SizeFinder({ onSelectSize }: SizeFinderProps) {
 
             {step === 3 && result && (
               <div className={styles.result}>
-                <p className={styles.resultLabel}>おすすめサイズ</p>
+                <p
+                  className={styles.resultLabel}
+                  tabIndex={-1}
+                  data-step-focus
+                >
+                  <span className="visually-hidden">
+                    ステップ 3 / 全3ステップ 診断結果：
+                  </span>
+                  おすすめサイズ
+                </p>
                 <p className={styles.resultSize}>{result.size}</p>
                 <p className={styles.resultReason}>{result.reason}</p>
                 <div className={styles.resultActions}>

@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://neoguard.7g3.net/" />
 
     <!-- OGP -->
-    <meta property="og:type" content="product" />
+    <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NEO GUARD" />
     <meta property="og:title" content="NEO GUARD REEL POUCH｜大切なリールを移動中の傷から守る" />
     <meta
@@ -38,31 +38,23 @@
     />
 
     <!--
-      構造化データ (Product)。
-      本ページは架空商品のため brand を "NEO GUARD (Portfolio Concept)" とし、
-      description にもデモである旨を明記しています。実運用時は実データへ差し替えてください。
+      構造化データ。
+      架空商品を実在の販売ページと誤認されないよう、Product ではなく CreativeWork として
+      「ポートフォリオ作品」であることを表現しています。評価・在庫・販売情報は含めません。
     -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "NEO GUARD REEL POUCH",
-        "description": "ネオプレーン素材で釣行時の衝撃・擦れ・水しぶきからリールを保護するリールポーチ。※本商品はポートフォリオ制作を目的とした架空（デモ）商品です。",
-        "brand": { "@type": "Brand", "name": "NEO GUARD (Portfolio Concept)" },
-        "category": "Fishing Reel Protection",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "128"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "JPY",
-          "price": "1980",
-          "availability": "https://schema.org/InStock",
-          "url": "https://neoguard.7g3.net/"
-        },
-        "disambiguatingDescription": "Fictional product created for a portfolio. Not for sale."
+        "@type": "CreativeWork",
+        "name": "NEO GUARD REEL POUCH ランディングページ（ポートフォリオ作品）",
+        "creator": { "@type": "Person", "name": "Nagisa Dozono", "url": "https://7g3.net/" },
+        "dateCreated": "2026",
+        "copyrightYear": 2026,
+        "inLanguage": "ja",
+        "url": "https://neoguard.7g3.net/",
+        "keywords": "React, TypeScript, Vite, ランディングページ, ポートフォリオ, UI/UX, EC",
+        "description": "釣具ECサイトを想定して制作した架空商品のポートフォリオLPです。商品・ブランドは架空のもので、実在の商品・ブランドとは関係がなく、実際の販売・決済は行いません。",
+        "creativeWorkStatus": "Portfolio concept (fictional product, not for sale)"
       }
     </script>
   </head>

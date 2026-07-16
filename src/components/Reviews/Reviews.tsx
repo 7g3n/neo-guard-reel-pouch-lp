@@ -29,7 +29,7 @@ export function Reviews() {
         </ul>
 
         <p className={styles.note}>
-          ※掲載しているレビューは、ポートフォリオ用に作成した架空の内容です。
+          ※掲載しているレビューは、画面設計を示すために作成した架空の内容です。
         </p>
       </div>
     </section>

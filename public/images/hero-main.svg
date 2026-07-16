@@ -1,19 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="商品メインビジュアルのプレースホルダー">
-  <rect width="800" height="600" fill="#e9edf0"/>
-  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <!-- rod line -->
-  <line x1="120" y1="150" x2="700" y2="470" stroke="#c2ccd3" stroke-width="10" stroke-linecap="round"/>
-  <!-- pouch (rounded body wrapping the reel) -->
-  <g transform="translate(400 300)">
-    <rect x="-150" y="-95" width="300" height="200" rx="24" fill="#123047"/>
-    <rect x="-150" y="-95" width="300" height="200" rx="24" fill="none" stroke="#0d2536" stroke-width="4"/>
-    <!-- velcro strap -->
-    <rect x="-40" y="-95" width="80" height="200" fill="#0f2a3d"/>
-    <!-- reel spool hint -->
-    <circle cx="0" cy="5" r="52" fill="none" stroke="#3a5a70" stroke-width="6"/>
-    <circle cx="0" cy="5" r="18" fill="none" stroke="#3a5a70" stroke-width="6"/>
-    <!-- brand mark -->
-    <text x="0" y="-52" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#8aa2b3" letter-spacing="2">NEO GUARD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="ロッドに取り付けたスピニングリールへNEO GUARD REEL POUCHを装着した状態">
+  <defs>
+    <clipPath id="pouchClip">
+      <rect x="238" y="250" width="326" height="182" rx="34" />
+    </clipPath>
+  </defs>
+
+  <!-- background: neutral workbench -->
+  <rect width="800" height="600" fill="#eef1f3" />
+  <rect x="0" y="452" width="800" height="148" fill="#e6eaed" />
+  <line x1="0" y1="452" x2="800" y2="452" stroke="#dbe0e4" stroke-width="2" />
+  <ellipse cx="404" cy="452" rx="214" ry="24" fill="#123047" opacity="0.10" />
+
+  <!-- ===== Rod ===== -->
+  <g>
+    <rect x="70" y="212" width="150" height="34" rx="17" fill="#26292d" />
+    <line x1="96" y1="216" x2="96" y2="242" stroke="#191b1e" stroke-width="2" />
+    <line x1="120" y1="216" x2="120" y2="242" stroke="#191b1e" stroke-width="2" />
+    <line x1="144" y1="216" x2="144" y2="242" stroke="#191b1e" stroke-width="2" />
+    <rect x="218" y="214" width="70" height="30" rx="6" fill="#3a434d" />
+    <rect x="284" y="216" width="18" height="26" rx="4" fill="#2b333b" />
+    <polygon points="300,216 736,236 736,250 300,242" fill="#2b2f34" />
+    <polygon points="300,216 736,236 736,240 300,222" fill="#3c434b" />
+    <g fill="none" stroke="#565f69" stroke-width="3">
+      <ellipse cx="470" cy="236" rx="7" ry="15" />
+      <ellipse cx="600" cy="240" rx="6" ry="12" />
+      <ellipse cx="695" cy="243" rx="5" ry="9" />
+    </g>
   </g>
-  <text x="400" y="560" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="20" fill="#59636e">商品画像（差し替え用プレースホルダー）</text>
+
+  <rect x="300" y="240" width="26" height="30" rx="4" fill="#3a434d" />
+
+  <!-- ===== Spinning reel peeking from the front opening ===== -->
+  <g>
+    <ellipse cx="256" cy="342" rx="26" ry="52" fill="#5c6873" />
+    <ellipse cx="256" cy="298" rx="26" ry="9" fill="#8a97a1" />
+    <ellipse cx="256" cy="386" rx="26" ry="9" fill="#3f4952" />
+    <ellipse cx="256" cy="342" rx="26" ry="52" fill="none" stroke="#454f59" stroke-width="3" />
+    <ellipse cx="256" cy="342" rx="12" ry="24" fill="#39424b" />
+    <path d="M240 296 q-26 46 0 92" fill="none" stroke="#9aa6af" stroke-width="4" stroke-linecap="round" />
+    <circle cx="240" cy="296" r="5" fill="#1677a6" />
+    <circle cx="240" cy="388" r="5" fill="#6c7883" />
+  </g>
+
+  <!-- ===== Neoprene pouch ===== -->
+  <g>
+    <rect x="242" y="258" width="326" height="182" rx="34" fill="#0e2536" />
+    <rect x="238" y="250" width="326" height="182" rx="34" fill="#163a54" />
+    <g clip-path="url(#pouchClip)">
+      <ellipse cx="360" cy="262" rx="220" ry="60" fill="#1d496a" opacity="0.55" />
+      <ellipse cx="330" cy="432" rx="220" ry="50" fill="#0f2c42" opacity="0.5" />
+    </g>
+    <rect x="256" y="268" width="290" height="146" rx="24" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="7 5" opacity="0.7" />
+    <ellipse cx="256" cy="341" rx="12" ry="60" fill="#0e2536" />
+
+    <!-- fixing belt (vertical strap with hook-and-loop) -->
+    <rect x="420" y="250" width="66" height="182" fill="#0f2f45" />
+    <rect x="424" y="256" width="58" height="170" rx="4" fill="none" stroke="#37648a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7" />
+    <rect x="432" y="320" width="42" height="46" rx="4" fill="#123449" />
+    <g stroke="#2c5570" stroke-width="1" opacity="0.7">
+      <line x1="436" y1="327" x2="470" y2="327" />
+      <line x1="436" y1="335" x2="470" y2="335" />
+      <line x1="436" y1="343" x2="470" y2="343" />
+      <line x1="436" y1="351" x2="470" y2="351" />
+      <line x1="436" y1="359" x2="470" y2="359" />
+    </g>
+
+    <!-- brand tag -->
+    <rect x="286" y="392" width="96" height="26" rx="5" fill="#eef2f5" />
+    <text x="334" y="409" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#123047">NEO GUARD</text>
+  </g>
+
+  <!-- ===== Reel handle protruding at lower right ===== -->
+  <g>
+    <rect x="556" y="356" width="40" height="12" rx="6" fill="#3a434d" transform="rotate(24 576 362)" />
+    <circle cx="612" cy="392" r="17" fill="#242c34" />
+    <circle cx="612" cy="392" r="17" fill="none" stroke="#12181e" stroke-width="2" />
+    <circle cx="607" cy="387" r="5" fill="#4a555f" />
+  </g>
 </svg>

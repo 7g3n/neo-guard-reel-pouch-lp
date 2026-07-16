@@ -1,11 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="特徴イメージのプレースホルダー">
-  <rect width="600" height="450" fill="#eef2f5"/>
-  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <line x1="80" y1="120" x2="520" y2="330" stroke="#c2ccd3" stroke-width="12" stroke-linecap="round"/>
-  <g transform="translate(300 225)">
-    <rect x="-120" y="-72" width="240" height="150" rx="20" fill="#123047"/>
-    <rect x="-30" y="-72" width="60" height="150" fill="#0f2a3d"/>
-    <path d="M-120 -30 q-24 0 -24 24" fill="none" stroke="#123047" stroke-width="10" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="リールへポーチをかぶせ、固定ベルトを巻いている途中の様子">
+  <rect width="600" height="450" fill="#eef1f3" />
+  <ellipse cx="300" cy="388" rx="180" ry="20" fill="#123047" opacity="0.08" />
+
+  <!-- rod segment -->
+  <polygon points="70,150 540,176 540,190 70,166" fill="#2b2f34" />
+  <rect x="70" y="148" width="120" height="26" rx="13" fill="#26292d" />
+
+  <!-- reel (left half exposed) -->
+  <g transform="translate(232 250)">
+    <rect x="-8" y="-96" width="26" height="40" rx="4" fill="#3a434d" />
+    <path d="M-58 -44 q84 -16 112 26 q10 48 -26 62 q-74 12 -96 -18 q-16 -44 10 -70z" fill="#414c57" />
+    <ellipse cx="-74" cy="4" rx="24" ry="46" fill="#5c6873" />
+    <ellipse cx="-74" cy="-40" rx="24" ry="8" fill="#8a97a1" />
+    <ellipse cx="-74" cy="48" rx="24" ry="8" fill="#3f4952" />
+    <ellipse cx="-74" cy="4" rx="11" ry="22" fill="#39424b" />
+    <path d="M-92 -38 q-24 42 0 84" fill="none" stroke="#9aa6af" stroke-width="4" stroke-linecap="round" />
+    <circle cx="-92" cy="-38" r="4" fill="#1677a6" />
+    <!-- handle bottom -->
+    <rect x="-6" y="70" width="10" height="34" rx="5" fill="#333c45" />
+    <circle cx="-1" cy="112" r="13" fill="#242c34" />
+    <circle cx="-5" cy="108" r="4" fill="#4a555f" />
   </g>
-  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">装着イメージ</text>
+
+  <!-- pouch pulled halfway over from the right -->
+  <g>
+    <path d="M258 176 h210 a34 34 0 0 1 34 34 v96 a34 34 0 0 1 -34 34 h-210 z" fill="#0e2536" transform="translate(4 6)" />
+    <path d="M258 176 h210 a34 34 0 0 1 34 34 v96 a34 34 0 0 1 -34 34 h-210 z" fill="#163a54" />
+    <path d="M300 190 q120 -18 176 6 v30 q-120 -20 -176 0z" fill="#1d496a" opacity="0.5" />
+    <rect x="272" y="192" width="216" height="126" rx="20" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="7 5" opacity="0.6" />
+    <!-- open belt flap being wrapped -->
+    <path d="M360 176 l64 -46 a12 12 0 0 1 18 4 l6 12 -70 50z" fill="#0f2f45" />
+    <path d="M368 172 l60 -42" fill="none" stroke="#37648a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7" />
+    <rect x="426" y="126" width="26" height="20" rx="3" fill="#123449" />
+    <!-- brand tag -->
+    <rect x="288" y="286" width="90" height="24" rx="5" fill="#eef2f5" />
+    <text x="333" y="302" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#123047">NEO GUARD</text>
+  </g>
+
+  <!-- motion arrow (wrapping direction) -->
+  <g stroke="#e45a2a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M470 128 q46 26 26 78" />
+    <path d="M488 196 l8 12 14 -6" />
+  </g>
 </svg>

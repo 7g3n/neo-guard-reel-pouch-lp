@@ -42,7 +42,7 @@ export function Hero() {
               labelSuffix={`${product.reviewCount}件のレビュー`}
             />
             <span className={styles.ratingValue}>{product.rating.toFixed(1)} / 5</span>
-            <span className={styles.reviewCount}>{product.reviewCount} reviews</span>
+            <span className={styles.reviewCount}>{product.reviewCount}件のレビュー</span>
           </div>
 
           <div className={styles.actions}>

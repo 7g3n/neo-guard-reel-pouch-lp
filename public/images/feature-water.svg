@@ -1,13 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="特徴イメージのプレースホルダー">
-  <rect width="600" height="450" fill="#eef2f5"/>
-  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <g transform="translate(300 205)">
-    <rect x="-130" y="-70" width="260" height="150" rx="20" fill="#123047"/>
-    <g fill="none" stroke="#5f97b8" stroke-width="6" stroke-linecap="round">
-      <path d="M-70 -30 q20 30 0 55 q-20 -25 0 -55z"/>
-      <path d="M10 -10 q16 24 0 44 q-16 -20 0 -44z"/>
-      <path d="M70 -40 q14 20 0 38 q-14 -18 0 -38z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="ポーチ表面で雨や水しぶきの水滴が弾かれている様子">
+  <rect width="600" height="450" fill="#eef1f3" />
+  <ellipse cx="300" cy="386" rx="180" ry="20" fill="#123047" opacity="0.08" />
+
+  <!-- pouch surface (angled panel) -->
+  <g>
+    <rect x="120" y="120" width="360" height="210" rx="30" fill="#0e2536" />
+    <rect x="116" y="114" width="360" height="210" rx="30" fill="#163a54" />
+    <!-- surface sheen -->
+    <path d="M140 150 q160 -34 320 6 v40 q-160 -30 -320 0z" fill="#1d496a" opacity="0.5" />
+    <!-- stitching -->
+    <rect x="134" y="132" width="324" height="174" rx="22" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="7 5" opacity="0.6" />
+    <!-- brand tag -->
+    <rect x="150" y="270" width="92" height="24" rx="5" fill="#eef2f5" />
+    <text x="196" y="286" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#123047">NEO GUARD</text>
+  </g>
+
+  <!-- beading water droplets resting/rolling off -->
+  <g>
+    <!-- droplet shape: teardrop -->
+    <g fill="#8ecae6" opacity="0.92">
+      <path d="M250 176 c-13 0 -22 10 -22 22 c0 13 10 22 22 22 c12 0 22 -9 22 -22 c0 -12 -9 -14 -13 -24 c-2 -5 -4 -8 -9 -20z" />
+      <path d="M330 150 c-9 0 -16 7 -16 16 c0 9 7 16 16 16 c9 0 16 -7 16 -16 c0 -8 -6 -10 -9 -17 c-2 -3 -3 -5 -7 -15z" />
+      <path d="M392 210 c-11 0 -19 8 -19 19 c0 11 8 19 19 19 c10 0 19 -8 19 -19 c0 -10 -7 -12 -11 -20 c-2 -4 -3 -6 -8 -18z" />
+      <path d="M300 232 c-7 0 -13 6 -13 13 c0 7 6 13 13 13 c7 0 13 -6 13 -13 c0 -7 -5 -8 -7 -14 c-2 -3 -2 -4 -6 -12z" />
+    </g>
+    <!-- droplet highlights -->
+    <g fill="#e9f6fb" opacity="0.9">
+      <ellipse cx="244" cy="192" rx="5" ry="7" />
+      <ellipse cx="325" cy="162" rx="4" ry="5" />
+      <ellipse cx="387" cy="223" rx="4" ry="6" />
+      <ellipse cx="296" cy="240" rx="3" ry="4" />
+    </g>
+    <!-- run-off trails -->
+    <g stroke="#8ecae6" stroke-width="3" stroke-linecap="round" opacity="0.55" fill="none">
+      <path d="M258 208 q6 20 2 40" />
+      <path d="M336 176 q6 16 2 30" />
     </g>
   </g>
-  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">撥水イメージ（完全防水ではありません）</text>
+
+  <!-- small splash marks above surface (repelled) -->
+  <g fill="#8ecae6" opacity="0.7">
+    <circle cx="210" cy="96" r="5" />
+    <circle cx="360" cy="88" r="4" />
+    <circle cx="430" cy="120" r="5" />
+    <circle cx="176" cy="140" r="3" />
+  </g>
 </svg>

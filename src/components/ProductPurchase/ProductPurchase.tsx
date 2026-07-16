@@ -57,6 +57,10 @@ export function ProductPurchase({
     label: s.label,
   }));
 
+  const selectedColorLabel =
+    product.colors.find((c) => c.id === colorId)?.label ?? colorId;
+  const selectionSummary = `${selectedColorLabel} / ${size}サイズ / 数量${quantity}`;
+
   const handleColor = (id: string) => {
     onColorChange(id);
     const label = product.colors.find((c) => c.id === id)?.label ?? id;
@@ -74,11 +78,10 @@ export function ProductPurchase({
   };
 
   const handleAddToCart = () => {
-    const colorLabel = product.colors.find((c) => c.id === colorId)?.label ?? colorId;
-    trackEvent('add_to_cart_click', { color: colorLabel, size, quantity });
+    trackEvent('add_to_cart_click', { color: selectedColorLabel, size, quantity });
 
     setMessage(
-      'ポートフォリオ用のデモのため、実際の注文処理は行われません。',
+      `${selectedColorLabel}・${size}サイズ・数量${quantity}を選択しました。ポートフォリオ用デモのため、注文処理は行われません。`,
     );
     if (messageTimer.current) window.clearTimeout(messageTimer.current);
     messageTimer.current = window.setTimeout(() => setMessage(null), 6000);
@@ -92,7 +95,7 @@ export function ProductPurchase({
     >
       <div className="container">
         <div className={styles.card}>
-          <h2 id="purchase-heading" className={styles.name}>
+          <h2 id="purchase-heading" className={styles.name} tabIndex={-1}>
             {product.name}
           </h2>
 
@@ -164,6 +167,11 @@ export function ProductPurchase({
             </div>
           </div>
 
+          <p className={styles.summary}>
+            <span className={styles.summaryLabel}>選択中</span>
+            <span className={styles.summaryValue}>{selectionSummary}</span>
+          </p>
+
           <button
             type="button"
             className={styles.addToCart}
@@ -199,7 +207,7 @@ export function ProductPurchase({
           </ul>
 
           <p className={styles.demoNote}>
-            本ページはポートフォリオ制作を目的とした架空の商品LPです。実際の販売・決済は行いません。
+            本ページは、釣具ECサイトを想定して制作したポートフォリオ作品です。商品・ブランドは架空のもので、実際の販売・決済は行いません。
           </p>
         </div>
       </div>

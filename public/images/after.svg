@@ -1,14 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="使用後のイメージのプレースホルダー">
-  <rect width="600" height="450" fill="#e8edf0"/>
-  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <rect x="70" y="120" width="460" height="260" rx="16" fill="#d3dbe1"/>
-  <rect x="70" y="120" width="460" height="60" rx="16" fill="#c3cdd4"/>
-  <!-- each reel in its own pouch -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="それぞれのリールがポーチで個別に保護され、バッグの中が整理されている状態">
+  <rect width="600" height="450" fill="#e8edf0" />
+
+  <!-- tackle bag interior -->
+  <rect x="70" y="120" width="460" height="260" rx="22" fill="#5a626b" />
+  <rect x="70" y="120" width="460" height="52" rx="22" fill="#4a525b" />
+  <rect x="92" y="150" width="416" height="210" rx="14" fill="#40474f" />
+
+  <!-- three pouched reels, upright and organized -->
   <g>
-    <rect x="150" y="215" width="130" height="120" rx="18" fill="#123047"/>
-    <circle cx="215" cy="275" r="30" fill="none" stroke="#3a5a70" stroke-width="6"/>
-    <rect x="320" y="215" width="130" height="120" rx="18" fill="#123047"/>
-    <circle cx="385" cy="275" r="30" fill="none" stroke="#3a5a70" stroke-width="6"/>
+    <!-- pouch 1 -->
+    <g transform="translate(160 258)">
+      <rect x="-46" y="-58" width="96" height="150" rx="20" fill="#0e2536" />
+      <rect x="-50" y="-62" width="96" height="150" rx="20" fill="#163a54" />
+      <rect x="-40" y="-52" width="76" height="130" rx="12" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+      <rect x="-18" y="-62" width="30" height="150" fill="#0f2f45" opacity="0.85" />
+      <ellipse cx="-4" cy="14" rx="16" ry="16" fill="none" stroke="#3a6a8f" stroke-width="4" />
+    </g>
+    <!-- pouch 2 -->
+    <g transform="translate(292 258)">
+      <rect x="-46" y="-58" width="96" height="150" rx="20" fill="#0e2536" />
+      <rect x="-50" y="-62" width="96" height="150" rx="20" fill="#163a54" />
+      <rect x="-40" y="-52" width="76" height="130" rx="12" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+      <rect x="-18" y="-62" width="30" height="150" fill="#0f2f45" opacity="0.85" />
+      <ellipse cx="-4" cy="14" rx="16" ry="16" fill="none" stroke="#3a6a8f" stroke-width="4" />
+    </g>
+    <!-- pouch 3 -->
+    <g transform="translate(424 258)">
+      <rect x="-46" y="-58" width="96" height="150" rx="20" fill="#0e2536" />
+      <rect x="-50" y="-62" width="96" height="150" rx="20" fill="#163a54" />
+      <rect x="-40" y="-52" width="76" height="130" rx="12" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+      <rect x="-18" y="-62" width="30" height="150" fill="#0f2f45" opacity="0.85" />
+      <ellipse cx="-4" cy="14" rx="16" ry="16" fill="none" stroke="#3a6a8f" stroke-width="4" />
+    </g>
   </g>
-  <text x="300" y="415" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#59636e">使用後：ポーチで個別に保護</text>
+
+  <!-- AFTER label -->
+  <rect x="70" y="120" width="98" height="34" fill="#1677a6" />
+  <text x="119" y="143" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#ffffff">AFTER</text>
 </svg>

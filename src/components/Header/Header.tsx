@@ -20,6 +20,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,17 +29,65 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // モバイルメニュー開放中は背景スクロールを止め、Escで閉じる。
+  const closeMenu = () => {
+    setMenuOpen(false);
+    menuButtonRef.current?.focus();
+  };
+
+  // メニュー開放中: 背景スクロール停止、最初の項目へフォーカス、Esc/フォーカストラップ制御
   useEffect(() => {
     if (!menuOpen) return;
 
     document.body.classList.add('is-menu-open');
+
+    // トグルボタン＋パネル内の操作可能要素をトラップ対象にする
+    const getFocusable = (): HTMLElement[] => {
+      const items: HTMLElement[] = [];
+      if (menuButtonRef.current) items.push(menuButtonRef.current);
+      if (mobileMenuRef.current) {
+        items.push(
+          ...Array.from(
+            mobileMenuRef.current.querySelectorAll<HTMLElement>(
+              'a[href], button:not([disabled])',
+            ),
+          ),
+        );
+      }
+      return items;
+    };
+
+    // 開いたら最初のメニュー項目へフォーカス
+    mobileMenuRef.current
+      ?.querySelector<HTMLElement>('a[href], button:not([disabled])')
+      ?.focus();
+
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        e.preventDefault();
         setMenuOpen(false);
         menuButtonRef.current?.focus();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+
+      const focusable = getFocusable();
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      // メニュー外へ抜けそうな場合は端でループさせる
+      if (e.shiftKey) {
+        if (active === first || !focusable.includes(active as HTMLElement)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else if (active === last || !focusable.includes(active as HTMLElement)) {
+        e.preventDefault();
+        first.focus();
       }
     };
+
     document.addEventListener('keydown', onKeyDown);
 
     return () => {
@@ -48,8 +97,10 @@ export function Header() {
   }, [menuOpen]);
 
   const handleNav = (id: string) => {
+    const wasOpen = menuOpen;
     setMenuOpen(false);
     scrollToId(id);
+    if (wasOpen) menuButtonRef.current?.focus();
   };
 
   return (
@@ -112,6 +163,7 @@ export function Header() {
       {/* モバイルメニュー */}
       <div
         id="mobile-menu"
+        ref={mobileMenuRef}
         className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}
         hidden={!menuOpen}
       >
@@ -148,7 +200,7 @@ export function Header() {
           className={styles.overlay}
           aria-label="メニューを閉じる"
           tabIndex={-1}
-          onClick={() => setMenuOpen(false)}
+          onClick={closeMenu}
         />
       )}
     </header>

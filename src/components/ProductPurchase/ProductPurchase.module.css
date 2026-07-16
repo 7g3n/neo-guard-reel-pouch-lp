@@ -116,8 +116,35 @@
   font-size: 1rem;
 }
 
-.addToCart {
+.summary {
   margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--color-navy-tint);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+}
+
+.summaryLabel {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-navy);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.summaryValue {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.addToCart {
+  margin-top: 16px;
   width: 100%;
   display: inline-flex;
   align-items: center;

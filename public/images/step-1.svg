@@ -1,10 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="使い方ステップ1の図解プレースホルダー">
-  <rect width="480" height="360" fill="#eef2f5"/>
-  <rect x="1" y="1" width="478" height="358" fill="none" stroke="#dde2e6" stroke-width="2"/>
-  <line x1="60" y1="120" x2="420" y2="120" stroke="#c2ccd3" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="240" cy="150" r="40" fill="none" stroke="#123047" stroke-width="7"/>
-  <circle cx="240" cy="150" r="13" fill="none" stroke="#123047" stroke-width="7"/>
-  <path d="M200 250 q40 -34 80 0" fill="none" stroke="#e45a2a" stroke-width="7" stroke-linecap="round"/>
-  <path d="M240 210 v30 M228 226 l12 14 l12 -14" fill="none" stroke="#e45a2a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="240" y="330" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#59636e">ポーチをかぶせる</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="リールにポーチを上からかぶせる手順">
+  <rect width="480" height="360" fill="#eef1f3" />
+  <ellipse cx="240" cy="316" rx="150" ry="16" fill="#123047" opacity="0.08" />
+
+  <!-- rod + reel -->
+  <polygon points="60,238 420,238 420,250 60,250" fill="#2b2f34" />
+  <g transform="translate(240 250)">
+    <rect x="-14" y="-24" width="28" height="24" rx="4" fill="#3a434d" />
+    <path d="M-46 0 q60 -14 84 20 q10 36 -18 48 q-56 12 -74 -12 q-14 -34 8 -56z" fill="#414c57" />
+    <ellipse cx="-60" cy="30" rx="20" ry="38" fill="#5c6873" />
+    <ellipse cx="-60" cy="-6" rx="20" ry="7" fill="#8a97a1" />
+    <ellipse cx="-60" cy="30" rx="9" ry="18" fill="#39424b" />
+  </g>
+
+  <!-- pouch descending from above -->
+  <g transform="translate(240 118)">
+    <rect x="-96" y="-46" width="192" height="118" rx="30" fill="#0e2536" transform="translate(3 4)" />
+    <rect x="-98" y="-48" width="192" height="118" rx="30" fill="#163a54" />
+    <path d="M-70 -30 q72 -14 132 4 v22 q-72 -16 -132 0z" fill="#1d496a" opacity="0.5" />
+    <rect x="-82" y="-32" width="160" height="86" rx="18" fill="none" stroke="#5c86a6" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+    <rect x="-52" y="34" width="80" height="22" rx="5" fill="#eef2f5" />
+    <text x="-12" y="49" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#123047">NEO GUARD</text>
+  </g>
+
+  <!-- down arrow -->
+  <g stroke="#e45a2a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="240" y1="196" x2="240" y2="222" />
+    <path d="M226 210 l14 16 14 -16" />
+  </g>
 </svg>

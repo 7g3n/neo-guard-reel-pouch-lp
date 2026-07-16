@@ -26,6 +26,8 @@ export default function App() {
   const handleSelectSizeFromFinder = (recommended: SizeCode) => {
     setSize(recommended);
     scrollToId(SECTION_IDS.purchase);
+    // 購入エリアの見出しへフォーカスを移す（preventScroll でスムーズスクロールを妨げない）
+    document.getElementById('purchase-heading')?.focus({ preventScroll: true });
   };
 
   return (
